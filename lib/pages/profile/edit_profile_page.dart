@@ -8,20 +8,34 @@ class EditProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomPadding: true,
-        appBar: AppBar(title: Text('Edit Profile'),),
+        appBar: AppBar(
+          title: Text('Edit Profile'),
+          automaticallyImplyLeading: false,
+          leading: new IconButton(
+            icon: new Icon(Icons.close),
+            onPressed: () {
+              if (Navigator.canPop(context)) {
+                Navigator.pop(context);
+              } else {
+                Navigator.pushNamed(context, '/viewProfile');
+              }
+            },
+          ),
+          actions: <Widget>[
+            new IconButton(
+              icon: new Icon(Icons.save),
+              onPressed: () {
+                Navigator.pushNamed(context, '/viewProfile');
+              },
+            ),
+          ],
+        ),
         body: Container(
           decoration: PageDecoration.buildBoxDecoration(),
           child: Container(
             margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20.0),
             child: Column(
               children: <Widget>[
-                Container(
-                    child: IconButton(
-                        icon: Icon(Icons.save),
-                        color: Colors.white,
-                        onPressed: () =>
-                            Navigator.pushNamed(context, '/viewProfile')),
-                    alignment: Alignment.topRight),
                 Expanded(
                   child: EditProfile(),
                 )
