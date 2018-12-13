@@ -28,6 +28,8 @@ class TaskSchedulePage extends StatelessWidget {
                   )
                 ],
               )),
-        ));
+        )
+    );
   }
+
 }

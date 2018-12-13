@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:onboarding/models/task_item.dart';
 import 'package:onboarding/pages/home_page.dart';
+import 'package:onboarding/pages/welcome_page.dart';
 import 'package:onboarding/pages/profile/edit_profile_page.dart';
 import 'package:onboarding/pages/profile/view_profile_page.dart';
 import 'package:onboarding/pages/task/task_list_page.dart';
@@ -29,8 +30,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
 //      home: TaskListPage([Task(description: 'my task')]),
-      home: TaskSchedulePage(),
-//      home: HomePage(),
+//      home: TaskSchedulePage(),
+      home: HomePage(),
       routes: {
         '/editProfile': (BuildContext context) => EditProfilePage(),
         '/viewProfile': (BuildContext context) => ViewProfilePage(),
