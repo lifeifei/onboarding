@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/pages/intro/sign_up_input.dart';
+import 'package:onboarding/pages/common/input_field.dart';
 
 class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
-      SignUpInput(labelText: 'Name', icon: Icons.person),
-      SignUpInput(labelText: 'Email', icon: Icons.person),
-      SignUpInput(labelText:'Password', icon: Icons.person, obscureText: true),
+      InputField(labelText: 'Name', icon: Icons.person),
+      InputField(labelText: 'Email', icon: Icons.person),
+      InputField(labelText:'Password', icon: Icons.person, obscureText: true),
     ],);
   }
 }

@@ -3,6 +3,9 @@ import 'package:onboarding/pages/intro/intro_button.dart';
 import 'package:onboarding/pages/intro/intro_image.dart';
 
 class IntroStartPage extends StatelessWidget {
+  final Function onButtonPressed;
+
+  IntroStartPage(this.onButtonPressed);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,7 +19,7 @@ class IntroStartPage extends StatelessWidget {
         SizedBox(height: 20.0),
         Container(
             child: Text('Please tell us about yourself')),
-        IntroButton('Setup')
+        IntroButton('Setup', onButtonPressed)
       ],
     );
   }
