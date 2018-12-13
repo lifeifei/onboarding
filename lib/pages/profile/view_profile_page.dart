@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/models/profile.dart';
 import 'package:onboarding/pages/common/page_decoration.dart';
 import 'package:onboarding/pages/profile/profile_detail.dart';
 
 class ViewProfilePage extends StatelessWidget {
+  final Profile profile;
+  ViewProfilePage(this.profile);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +25,7 @@ class ViewProfilePage extends StatelessWidget {
                             Navigator.pushNamed(context, '/editProfile')),
                     alignment: Alignment.topRight),
                 Expanded(
-                  child: ProfileDetail(),
+                  child: ProfileDetail(profile),
                 )
               ],
             ),

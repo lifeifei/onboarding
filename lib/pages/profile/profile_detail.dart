@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/models/profile.dart';
 import 'package:onboarding/pages/profile/profile_tag_items.dart';
 import 'package:onboarding/pages/profile/profile_text_item.dart';
 
 class ProfileDetail extends StatelessWidget {
+  final Profile profile;
+
+  ProfileDetail(this.profile);
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +17,17 @@ class ProfileDetail extends StatelessWidget {
             width: 100.0,
             alignment: Alignment.topLeft),
         SizedBox(height: 20.0,),
-        Text('Lifei Zhou'),
+        Text(profile.name),
         SizedBox(height: 10.0,),
-        Text('Software Engineer'),
+        Text(profile.position),
         SizedBox(height: 20.0,),
-        ProfileTextItem('About me', 'Something is important'),
+        ProfileTextItem('About me', profile.about),
         SizedBox(height: 20.0,),
-        ProfileTextItem('Favorate holiday destination', 'Japan, New York, New Zealand'),
+        ProfileTextItem('Favorate holiday destination', profile.holiday),
         SizedBox(height: 20.0,),
-        ProfileTextItem('Favorate food', 'Dumpling, Ice cream'),
+        ProfileTextItem('Favorate food', profile.food),
         SizedBox(height: 20.0,),
-        ProfileTagItems('Skills', ['Ruby', 'Java']),
+        ProfileTagItems('Skills', profile.skills),
       ],
     );
   }

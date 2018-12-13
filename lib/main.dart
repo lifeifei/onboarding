@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:onboarding/models/profile.dart';
+import 'package:onboarding/models/profiles.dart';
 import 'package:onboarding/models/task_item.dart';
 import 'package:onboarding/pages/home_page.dart';
 import 'package:onboarding/pages/welcome_page.dart';
 import 'package:onboarding/pages/profile/edit_profile_page.dart';
 import 'package:onboarding/pages/profile/view_profile_page.dart';
 import 'package:onboarding/pages/task/task_list_page.dart';
-import 'package:onboarding/pages/task/task_schedule_page.dart';
 
 void main()  {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -34,9 +35,32 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         '/editProfile': (BuildContext context) => EditProfilePage(),
-        '/viewProfile': (BuildContext context) => ViewProfilePage(),
+        '/viewProfile': (BuildContext context) => ViewProfilePage(null),
         '/taskList': (BuildContext context) => TaskListPage([Task(description: 'my task')])
       },
+        onGenerateRoute: _buildRoute
     );
+  }
+
+  Route<dynamic> _buildRoute(RouteSettings settings) {
+    final List<String> path = settings.name.split('/');
+    if (path[0] != '') {
+      return null;
+    }
+    if (path[1] == 'viewProfile') {
+      final String secondArg = path[2];
+      Profile profile;
+      if (secondArg == 'self') {
+        profile = Profiles.self;
+      } else {
+        final int index = int.parse(secondArg);
+        profile = Profiles.members[index];
+      }
+      return MaterialPageRoute<bool>(
+        builder: (BuildContext context) =>
+            ViewProfilePage(profile),
+      );
+    }
+    return null;
   }
 }
