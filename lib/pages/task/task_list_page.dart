@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/models/Task.dart';
+import 'package:onboarding/models/task_item.dart';
 import 'package:onboarding/pages/common/page_decoration.dart';
 
 class TaskListPage extends StatelessWidget {

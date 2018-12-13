@@ -21,6 +21,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_swiper : ^1.1.4
   scoped_model: ^1.0.1
+  carousel_slider: ^1.0.1
 
 dev_dependencies:
   flutter_test:
