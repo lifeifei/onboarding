@@ -9,7 +9,7 @@ class EditProfilePage extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomPadding: true,
         appBar: AppBar(
-          title: Text('Edit Profile'),
+          title: Text('Edit Profile', style: Theme.of(context).textTheme.subhead.copyWith(color: Colors.white)),
           automaticallyImplyLeading: false,
           leading: new IconButton(
             icon: new Icon(Icons.close),
@@ -22,10 +22,10 @@ class EditProfilePage extends StatelessWidget {
             },
           ),
           actions: <Widget>[
-            new IconButton(
-              icon: new Icon(Icons.save),
+            new FlatButton(
+              child: Text('Save', style: Theme.of(context).textTheme.subhead.copyWith(color: Colors.white)),
               onPressed: () {
-                Navigator.pushNamed(context, '/viewProfile');
+                Navigator.pushNamed(context, '/viewProfile/self');
               },
             ),
           ],

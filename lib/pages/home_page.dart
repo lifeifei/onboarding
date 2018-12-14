@@ -34,27 +34,27 @@ class HomePageState extends State<HomePage> {
         // sets the background color of the `BottomNavigationBar`
         canvasColor: const Color(0xFF167F67),
       ), // sets the inactive color of the `BottomNavigationBar`
-      child: TabBar(
+      child: Container(
+        height: 50.0,
+          child:TabBar(
         tabs: [
           Tab(
-            text: 'Tasks',
             icon: Icon(Icons.home),
           ),
           Tab(
-            text: 'Team',
             icon: Icon(Icons.people),
           ),
           Tab(
             icon: Icon(Icons.person),
-            text: 'Profile'
           )
         ],
         labelColor: Colors.green,
         unselectedLabelColor: Colors.blue,
         indicatorSize: TabBarIndicatorSize.label,
-        indicatorPadding: EdgeInsets.all(5.0),
+        indicatorPadding: EdgeInsets.all(0.0),
         indicatorColor: Colors.red,
-      ),
+
+      )),
     );
   }
 }

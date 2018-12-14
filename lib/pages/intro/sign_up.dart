@@ -6,9 +6,9 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
-      InputField(labelText: 'Name', icon: Icons.person),
-      InputField(labelText: 'Email', icon: Icons.person),
-      InputField(labelText:'Password', icon: Icons.person, obscureText: true),
+      InputField(labelText: 'Name', icon: Icons.person_outline),
+      InputField(labelText: 'Email', icon: Icons.mail_outline),
+      InputField(labelText:'Password', icon: Icons.lock_outline, obscureText: true),
     ],);
   }
 }

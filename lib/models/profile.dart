@@ -6,6 +6,7 @@ class Profile {
   final String holiday;
   final List<String> skills;
   final bool editable;
+  final String image;
 
-  Profile({this.name, this.position, this.about, this.food, this.holiday, this.skills, this.editable = false});
+  Profile({this.name, this.position, this.about, this.food, this.holiday, this.skills, this.editable = false, this.image});
 }

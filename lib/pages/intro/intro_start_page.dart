@@ -9,17 +9,22 @@ class IntroStartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         IntroImage(),
-        SizedBox(height: 50.0),
+        SizedBox(height: 30.0),
         Container(
             child: Text('Awesome!',
                 style: Theme.of(context).textTheme.title)),
 
         SizedBox(height: 20.0),
         Container(
-            child: Text('Please tell us about yourself')),
-        IntroButton('Setup', onButtonPressed)
+          child: Text('Please tell me about yourself',
+              style: Theme.of(context).textTheme.subhead),
+        )
+,
+        SizedBox(height: 40.0),
+        IntroButton('Setup your profile', onButtonPressed)
       ],
     );
   }

@@ -49,7 +49,7 @@ class IntroSwiper extends StatelessWidget {
     }
     return Container(
       child: introStepPage,
-      margin: EdgeInsets.symmetric(vertical: 100.0),
+      margin: EdgeInsets.symmetric(vertical: 50.0),
     );
   }
 }

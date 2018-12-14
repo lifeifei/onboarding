@@ -6,18 +6,24 @@ class IntroWelcomePage extends StatelessWidget {
   final Function onButtonPressed;
 
   IntroWelcomePage(this.onButtonPressed);
+
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         IntroImage(),
-        SizedBox(height: 50.0),
+        SizedBox(height: 30.0),
         Container(
-            child: Text('Morning, I am Kai',
+            child: Text("G'day, I am Kai",
                 style: Theme.of(context).textTheme.title)),
         SizedBox(height: 20.0),
-        Container(child: Text('Your ux unicorn buddy')),
-        IntroButton('Hello Kai!', onButtonPressed)
+        Container(
+          child: Text('Your UX unicorn buddy',
+              style: Theme.of(context).textTheme.subhead),
+        ),
+        SizedBox(height: 40.0),
+        IntroButton('Hello Kai', onButtonPressed)
       ],
     );
   }

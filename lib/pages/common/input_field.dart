@@ -11,19 +11,19 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: new TextStyle(color: Colors.white, fontSize: 21.0),
+      style: new TextStyle(color: Colors.white, fontSize: 18.0),
       maxLines: maxLines,
       obscureText: obscureText,
       decoration: InputDecoration(
           labelText: labelText,
-          labelStyle: TextStyle(color: Colors.white, fontSize: 21.0),
+          labelStyle: TextStyle(color: Color(0xFFa8d7f5), fontSize: 16.0),
           prefixIcon: Icon(
             icon,
             color: Colors.white,
-            size: 50.0,
+            size: 30.0,
           ),
           border: new UnderlineInputBorder(
-              borderSide: new BorderSide(color: Colors.white))),
+              borderSide: new BorderSide(color: Color(0xFFa8d7f5)))),
     );
   }
 }
