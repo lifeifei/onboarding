@@ -57,7 +57,8 @@ class MyApp extends StatelessWidget {
 //            home: HomePage(),
             routes: {
               '/editProfile': (BuildContext context) => EditProfilePage(),
-              '/viewProfile': (BuildContext context) => ViewProfilePage(null)
+              '/viewProfile': (BuildContext context) => ViewProfilePage(null),
+              '/homepage': (BuildContext context) => HomePage()
             },
             onGenerateRoute: _buildRoute));
   }

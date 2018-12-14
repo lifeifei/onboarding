@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/pages/common/page_decoration.dart';
 import 'package:onboarding/pages/profile/edit_profile.dart';
-import 'package:onboarding/pages/profile/profile_detail.dart';
 
 class EditProfilePage extends StatelessWidget {
   @override
@@ -17,7 +16,7 @@ class EditProfilePage extends StatelessWidget {
               if (Navigator.canPop(context)) {
                 Navigator.pop(context);
               } else {
-                Navigator.pushNamed(context, '/viewProfile');
+                Navigator.pushNamed(context, '/homepage');
               }
             },
           ),
