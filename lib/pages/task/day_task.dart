@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/models/day_tasks.dart';
 import 'package:onboarding/models/task_item.dart';
 
 class DayTask extends StatelessWidget {
@@ -33,7 +34,7 @@ class DayTask extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.only(left: 10.0),
-                        child: Text("2 tasks",
+                        child: Text("${DayTasks.getCompletedTasks(tasks)} tasks",
                         style: TextStyle(fontSize: 15.0, color: Color(0xFF4f4f4f), fontStyle: FontStyle.normal))),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -43,11 +44,11 @@ class DayTask extends StatelessWidget {
 
                           activeColor: Color(0xFF2abbde),
                           inactiveColor: Color(0xFFdff6fb),
-                          value: 0.2,
+                          value: DayTasks.getCompletedProgress(tasks),
                           onChanged: null,
                         )),
                         Text(
-                          '20%',
+                          "${DayTasks.getCompletedProgressInPercentage(tasks)}%",
                           style: TextStyle(color: Color(0xFF4f4f4f), fontSize: 15.0, fontStyle: FontStyle.normal))],
                         )
                       ],

@@ -31,15 +31,13 @@ class HomePageState extends State<HomePage> {
   Widget _buildNav(BuildContext context) {
     return Theme(
       data: Theme.of(context).copyWith(
-        // sets the background color of the `BottomNavigationBar`
-        canvasColor: const Color(0xFF167F67),
       ), // sets the inactive color of the `BottomNavigationBar`
       child: Container(
         height: 50.0,
           child:TabBar(
         tabs: [
           Tab(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home)
           ),
           Tab(
             icon: Icon(Icons.people),
@@ -48,11 +46,11 @@ class HomePageState extends State<HomePage> {
             icon: Icon(Icons.person),
           )
         ],
-        labelColor: Colors.green,
-        unselectedLabelColor: Colors.blue,
+        labelColor: Color(0xFF3399ff),
+        unselectedLabelColor: Color(0xFF31c8dd),
         indicatorSize: TabBarIndicatorSize.label,
         indicatorPadding: EdgeInsets.all(0.0),
-        indicatorColor: Colors.red,
+        indicatorColor: Color(0xFF3399ff),
 
       )),
     );

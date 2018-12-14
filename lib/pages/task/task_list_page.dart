@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/models/day_tasks.dart';
 import 'package:onboarding/models/task_item.dart';
 import 'package:onboarding/pages/common/page_decoration.dart';
+import 'package:onboarding/pages/task/day_task.dart';
 
 class TaskListPage extends StatelessWidget {
   final List<Task> tasks;
@@ -27,7 +29,7 @@ class TaskListPage extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.only(left: 10),
-                    child: Text("2 tasks", style: Theme.of(context)
+                    child: Text("${DayTasks.getCompletedTasks(tasks)} tasks", style: Theme.of(context)
                         .textTheme
                         .subhead
                         .copyWith(color: Colors.white)),
@@ -39,10 +41,10 @@ class TaskListPage extends StatelessWidget {
                           child: Slider(
                         activeColor: Colors.red,
                         inactiveColor: Colors.green,
-                        value: 0.2,
+                        value: DayTasks.getCompletedProgress(tasks),
                         onChanged: null,
                       )),
-                      Text('20%',
+                      Text("${DayTasks.getCompletedProgressInPercentage(tasks)}%",
                           style: Theme.of(context)
                               .textTheme
                               .subhead

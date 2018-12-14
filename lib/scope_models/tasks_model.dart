@@ -16,5 +16,4 @@ class TasksModel extends Model {
     notifyListeners();
   }
 
-
 }

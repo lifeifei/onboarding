@@ -53,8 +53,8 @@ class MyApp extends StatelessWidget {
                       color: Color(0xFF3399ff),
                       fontWeight: FontWeight.bold)),
             ),
-//            home: WelcomePage(),
-            home: HomePage(),
+            home: WelcomePage(),
+//            home: HomePage(),
             routes: {
               '/editProfile': (BuildContext context) => EditProfilePage(),
               '/viewProfile': (BuildContext context) => ViewProfilePage(null)
