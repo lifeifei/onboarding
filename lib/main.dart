@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
     return ScopedModel<TasksModel>(
         model: TasksModel(),
         child: MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               fontFamily: 'Poppins',
               hintColor: Colors.white,
